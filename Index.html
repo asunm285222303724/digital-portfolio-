@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhivya Teja's Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Enable smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background-image: url(BC4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 5%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent; /* Fully transparent background */
+    box-shadow: none; /* Removes shadow */
+}
+
+.logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white; /* Ensure text contrasts with background */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: violet;
+}
+
+
+/* Home Section */
+#home {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10%;
+    text-align: left;
+}
+
+.details h1 {
+    font-size: 3rem;
+    color: #212121;
+    margin-bottom: 20px;
+}
+
+.details span {
+    color: #ff5722;
+}
+
+.details p {
+    font-size: 1.2rem;
+    color: #555;
+    margin: 10px 0 20px;
+}
+
+.details a {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.details a:hover {
+    background-color: #0056b3;
+}
+
+.images img {
+    width: 50%;
+    border-radius: 15px;
+}
+
+/* About Section */
+#about {
+    background-image: url(img/BC4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation: fadeIn 2s ease-out forwards;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+#about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #212121;
+}
+
+.image2 {
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+    margin: 20px auto;
+    display: block;
+}
+
+.abt-p {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #e3fcec;
+    border-radius: 8px;
+    width: 70%;
+    line-height: 1.6;
+}
+
+/* Skills Section */
+.skills {
+    background-image: url(img/BC4.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: #333;
+    animation: fadeIn 2s ease-out forwards;
+    padding: 40px 10%;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.2em;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Skill Items */
+.skill {
+    margin: 20px 0;
+}
+
+.skill label {
+    font-size: 1em;
+    display: block;
+    margin-bottom: 8px;
+    color: #f0f0f0;
+}
+
+/* Progress Bar Styling */
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 14px; /* Adjusted height for compact design */
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+/* WebKit Progress Bar */
+progress::-webkit-progress-bar {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 7px;
+}
+
+progress::-webkit-progress-value {
+    background: linear-gradient(to right, #4caf50, #81c784); /* Green Gradient */
+    border-radius: 7px;
+}
+
+/* Firefox Progress Bar */
+progress::-moz-progress-bar {
+    background: linear-gradient(to right, #4caf50, #81c784);
+    border-radius: 7px;
+}
+
+/* Contact Section */
+.contact {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/img/BC4.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 50px 10%;
+    color: white;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Section Title */
+.contact h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Form Styling */
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+
+.contact form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact form button {
+    display: inline-block;
+    background: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.contact form button:hover {
+    background: #45a049;
+}
+
+/* Social Media Icons */
+.contact #social {
+    margin-top: 30px;
+}
+
+.contact .social-icon {
+    display: inline-block;
+    font-size: 1.8em;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact .social-icon:hover {
+    transform: scale(1.2);
+    color: #4caf50;
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 50px 10%;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent overlay */
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.projects h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Project Cards */
+.projects-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Project Image */
+.project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 2px solid #4caf50;
+}
+
+/* Project Title */
+.project-card h3 {
+    font-size: 1.5em;
+    margin: 15px;
+    color: #333;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Project Description */
+.project-card p {
+    margin: 15px;
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+/* Project Link */
+.project-link {
+    display: inline-block;
+    margin: 15px;
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    font-weight: bold;
+    font-size: 0.95em;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.project-link:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Background Image */
+.projects {
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+/* Hire Me Section */
+.hire {
+    padding: 60px 10%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Light overlay for better readability */
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    background: url('your-background-image.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.hire h2 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    color: white; /* Heading color is white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hire p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: black; /* Paragraph text color is black */
+    margin-bottom: 15px;
+}
+
+/* Skills Highlight Section */
+.skills-highlight h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: white; /* Heading color is white */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.skills-highlight ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto;
+    width: fit-content;
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.skills-highlight li {
+    margin: 8px 0;
+    color: black; /* List item text color is black */
+    position: relative;
+    padding-left: 25px;
+}
+
+.skills-highlight li::before {
+    content: '✔';
+    color: #4caf50;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translateY(3px);
+}
+
+/* Call-to-Action Section */
+.cta p {
+    margin-top: 20px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: black; /* Call-to-action text color is black */
+}
+
+.cta button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    color: white;
+    background: #4caf50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+
+/* Footer Section */
+.footer {
+    background: url('your-footer-bg.jpg') no-repeat center center fixed; /* Add your footer background image */
+    background-size: cover;
+    padding: 40px 10%;
+    text-align: center;
+    color: black; /* Black text color */
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Shadow for a lifted effect */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 1.8em;
+    color: black; /* Default black icon color */
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effects for Each Social Media */
+.footer-social a[href*="instagram.com"]:hover {
+    color: #E4405F; /* Instagram pink */
+    transform: scale(1.2);
+}
+
+.footer-social a[href*="facebook.com"]:hover {
+    color: #1877F2; /* Facebook blue */
+    transform: scale(1.2);
+}
+
+.footer-social a[href*="github.com"]:hover {
+    color: #000000; /* GitHub black */
+    transform: scale(1.2);
+}
+
+.footer-social a[href*="whatsapp.com"]:hover {
+    color: #25D366; /* WhatsApp green */
+    transform: scale(1.2);
+}
+
+.footer-social a[href*="twitter.com"]:hover {
+    color: #1DA1F2; /* Twitter blue */
+    transform: scale(1.2);
+}
+
+.footer p {
+    margin: 8px 0;
+    font-size: 1em;
+    line-height: 1.6;
+    color: black; /* Black text color */
+    font-weight: bold;
+}
+
+.footer p b {
+    color: #333; /* Darker shade for bold text */
+}
+
+.footer p:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+    transition: text-shadow 0.3s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer {
+        padding: 30px 5%;
+    }
+
+    .footer-social a {
+        margin: 0 5px;
+        font-size: 1.5em;
+    }
+
+    .footer p {
+        font-size: 0.9em;
+    }
+}
+
+
+/* Keyframes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <img src="logo2.jpg" alt="Logo" class="logo">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#hire">Hire Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="details">
+            <h1>Hi, I am <span>Dhivya Teja</span></h1>
+            <p>This is my portfolio website to showcase my details and work experience in web development.</p>
+            <a href="DTKR.pdf" class="btn-resume" download>Download Resume</a>
+        </div>
+        <div class="images">
+            <img src="teja3.jpg" alt="Dhivya Teja" class="profile-image">
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <img src="divyateja1.jpg" alt="Dhivya Teja" class="image2">
+            <div class="abt-para">
+                <p>Greetings! I am Dhivya Teja, a third-year undergraduate student pursuing a degree in Computer Science at Sridevi Arts and Science College. Over the past two years, I have gained expertise in web development, specifically in HTML and CSS.</p>
+                <p>I have a strong passion for problem-solving and excel at tackling complex challenges efficiently. I am eager to secure an opportunity in the IT industry where I can apply my skills and contribute effectively.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skill">
+            <label for="web-dev">Web Development (HTML, CSS, JavaScript)</label>
+            <progress id="web-dev" value="90" max="100"></progress>
+        </div>
+        <div class="skill">
+            <label for="java">Java</label>
+            <progress id="java" value="80" max="100"></progress>
+        </div>
+        <div class="skill">
+            <label for="python">Python</label>
+            <progress id="python" value="75" max="100"></progress>
+        </div>
+        <div class="skill">
+            <label for="csharp-cpp">C# and C++</label>
+            <progress id="csharp-cpp" value="70" max="100"></progress>
+        </div>
+    </section>
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form action="#">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+
+        <div id="social">
+            <a href="https://linkedin.com" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-container">
+            <div class="project-card">
+                <img src="Images.jpeg" alt="Login Page">
+                <h3>Login Page</h3>
+                <p>A brief description of the project. What was built and the tech stack used.</p>
+                <a href="LoginPage.html" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hire Me Section -->
+<section id="hire" class="hire">
+    <h2>Hire Me</h2>
+    <p>
+        If you're looking for a passionate web developer and back-end developer, I am always open to taking up new challenges and working on creative projects!
+    </p>
+    <p>
+        My expertise lies in designing dynamic and user-friendly web interfaces, developing robust back-end systems, and crafting seamless user experiences.
+    </p>
+    <div class="skills-highlight">
+        <h3>What I Offer:</h3>
+        <ul>
+            <li>Full-stack Web Development</li>
+            <li>Custom Web Applications</li>
+            <li>API Integration and Development</li>
+            <li>Responsive and SEO-Friendly Websites</li>
+            <li>Maintenance and Performance Optimization</li>
+        </ul>
+    </div>
+    <div class="cta">
+        <p>Let’s work together to bring your ideas to life! Whether you need a portfolio site, an e-commerce platform, or a custom application, I’ve got you covered.</p>
+        <button onclick="location.href='#contact'">Contact Me</button>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.instagram.com" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                <a href="https://www.whatsapp.com" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+
+            </div>
+            <p><b>Contact: 9342972095</b></p>
+            <p><b>Email: kdhivyatejab23130bsccs@gmail.com</b></p>
+            <p><b>Location: Kavaraipettai, Chennai-600052</b></p>
+        </div>
+    </footer>
+</body>
+
+</html>
